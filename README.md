@@ -1,4 +1,4 @@
-# Koho Senior Backend Code Challenge
+# Koho Full-Stack Coding Challenge
 
 We'd like you to finish building the Rails application with a few key components to demonstrate proficiency in many common Ruby and Rails patterns, which you'll find yourself using day-to-day here.
 
@@ -23,33 +23,13 @@ Please utilize the Rails app which stores and looks up rates from shipping servi
 
 #### Rates Model
 * A model to represent shipping rates that each provider has (different from the provider's flat rate). It should have these attributes:
-  * Rate as monetary value with currency (per kilo)
+  * Rate as monetary value with currency
   * Origin, as two-letter country code
   * Destination, as two-letter country code
   * Relationship to the shipping provider
 
 #### Requirements
-* Create a way to load the attached data into the data store. Via console is fine.
-* Make sure all the converted monetary USD amounts are stored.
-* Implement a reusable way to ensure that whenever a configurable money column is assigned the original value is stored along with a conversion to a 'default' currency (i.e. USD). It should be easy to include this functionality into any other model that works with currency. Bring this functionality into both the shipping rate model and the shipping service provider model. This is an example of how it should behave:
-
-  ```ruby
-  some_model = SomeModel.new
-
-  some_model.amount = 15.0
-  some_model.currency = "EUR"
-  some_model.save!
-
-  some_model.amount # => 15.00 EUR
-  some_model.common_amount # => 17.72 USD
-
-  some_model.amount = 30.0
-  some_model.currency = "EUR"
-  some_model.save!
-
-  some_model.amount # => 30.0 EUR
-  some_model.common_amount # => 35.43 USD
-  ```
+* Create a way to load the csv's in the codebase into the data store. Via console is fine.
 * Write any Rspec's you deem necessary.
 # Front-end Portion/UI
 

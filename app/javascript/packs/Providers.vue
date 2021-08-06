@@ -23,7 +23,7 @@ export default {
         {
           name: 'company name',
           rate: {
-            total: 100,
+            cents: 100,
             currency: 'USD'
           }
         }
