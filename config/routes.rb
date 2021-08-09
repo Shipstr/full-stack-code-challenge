@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'application#show'
   get '/', controller: :application, action: :show
-  resources :service_providers, only: :index
+  resources :shipping_rates, only: %w(index update)
 end

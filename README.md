@@ -1,35 +1,30 @@
 # Koho Full-Stack Coding Challenge
 
-We'd like you to finish building the Rails application with a few key components to demonstrate proficiency in many common Ruby and Rails patterns, which you'll find yourself using day-to-day here.
-
-Though each engineer does specialize in either front-end or back-end, we still sometimes have full-stack responsibilities. So we'd also like you to implement some basic functionality in the given Vue app.
+We'd like you to finish building the Rails application with a few key components to demonstrate proficiency in many common Ruby, Rails and Vue patterns, which you'll find yourself using day-to-day here.
 
 *We expect this exercise to take 2-4 hours at the most.* If you ran out of time, please comment on what remains to be done in the README.
 
-Since this is a backend-focused challenge, we are not looking for styling or CSS, but will notice if any improvements are made. Also, don't concern yourself with configuring everything perfectly. This is just an exercise, so if you don't need to tweak something in order to meet the criteria below, leave it at the defaults.
-
-At Koho, we work with money in most world currencies across our data model. For reporting purposes, we need to be able to work with all money amounts in a common currency of US dollars, in addition to the original currency it was stored with. For example, it should be easy to get a sum of all amounts in USD.
-
-Although we'll leave it to you to otherwise decide which gems to bring in, we do recommend `money-rails`. For this exercise, you'll need to add some currency conversion data. Assume `USD -> EUR is 0.84663`, and `EUR -> USD is 1.18115`. Don’t worry about any other currencies.
+Since this is a fullstack challenge, we are looking for styling and responsiveness as per the mockup attached in the root directory. 
 
 # Back-end Portion
 
-Please utilize the Rails app which stores and looks up rates from shipping service providers. The app should have these properties:
+Please utilize the Rails app to stores, looks up and update rates from shipping service providers.
+The app has the following models:
 
-#### Provider Model
-* A model to represent a shipping service provider. It should have these attributes:
+#### Provider Model 
+* A model to represent a shipping service provider. It has following attributes:
   * Name of company
   * A flat shipping rate as a monetary value with currency
 
 #### Rates Model
-* A model to represent shipping rates that each provider has (different from the provider's flat rate). It should have these attributes:
+* A model to represent shipping rates that each provider has (different from the provider's flat rate). It has following attributes:
   * Rate as monetary value with currency
   * Origin, as two-letter country code
   * Destination, as two-letter country code
   * Relationship to the shipping provider
 
 #### Requirements
-* Create a way to load the csv's in the codebase into the data store. Via console is fine.
+* Create a way to load the csv's(service_provider_data.csv and rate_data.csv) in the codebase into the data store. Via console task is fine.
 * Write any Rspec's you deem necessary.
 # Front-end Portion/UI
 
@@ -37,15 +32,16 @@ The repo has Vue already installed with Webpacker.
 
 #### Requirements
 * Fetch the data from the Rails app on page load.
-* Update the simple index view with a list of: provider's name, origin, destination, formatted rate as a monetary value, formatted common rate in USD.
-* Create a simple bare-bones form that allows editing and updating a rate. Allow changing all attributes except the common USD rate.
-
+* Update the rates index view with a list of: company's name, origin, destination, formatted rate as a monetary value.
+* Style the view as per the mockup in the codebase(rates_mockup.png) and make it responsive.
+* Create a simple bare-bones form that allows editing and updating the rate.
 
 To run the app:
 ```
 yarn
 bundle
-rails s
+bin/rails db:migrate
+bin/rails s
 ```
 
 # README
