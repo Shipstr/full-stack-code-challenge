@@ -4,11 +4,11 @@ We'd like you to finish building the Rails application with a few key components
 
 *We expect this exercise to take 2-4 hours at the most.* If you ran out of time, please comment on what remains to be done in the README.
 
-Since this is a fullstack challenge, we are looking for styling and responsiveness as per the mockup attached in the root directory. 
+Since this is a fullstack challenge, we are looking for styling and responsiveness matching the mockup in the root directory. 
 
 # Back-end Portion
 
-Please utilize the Rails app to stores, looks up and update rates from shipping service providers.
+Please utilize the Rails app to store, look up and update rates from shipping service providers.
 The app has the following models:
 
 #### Provider Model 
@@ -24,7 +24,7 @@ The app has the following models:
   * Relationship to the shipping provider
 
 #### Requirements
-* Create a way to load the csv's(service_provider_data.csv and rate_data.csv) in the codebase into the data store. Via console task is fine.
+* Create a way to load the CSV's service_provider_data.csv and rate_data.csv into the database using these models.
 * Write any Rspec's you deem necessary.
 # Front-end Portion/UI
 
@@ -33,7 +33,7 @@ The repo has Vue already installed with Webpacker.
 #### Requirements
 * Fetch the data from the Rails app on page load.
 * Update the rates index view with a list of: company's name, origin, destination, formatted rate as a monetary value.
-* Style the view as per the mockup in the codebase(rates_mockup.png) and make it responsive.
+* Style the view to match the mockup rates_mockup.png and make it responsive.
 * Create a simple bare-bones form that allows editing and updating the rate.
 
 To run the app:
