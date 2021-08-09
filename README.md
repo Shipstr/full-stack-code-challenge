@@ -4,9 +4,6 @@ We'd like you to finish building the Rails application with a few key components
 
 *We expect this exercise to take 2-4 hours at the most.* If you ran out of time, please comment on what remains to be done in the README.
 
-# Back-end Portion
-
-Please utilize the Rails app to store, look up and update rates from shipping service providers.
 The app has the following models:
 
 #### Provider Model 
@@ -21,20 +18,7 @@ The app has the following models:
   * Destination, as two-letter country code
   * Relationship to the shipping provider
   
-The app uses sqlite as the datastore.  
-
-#### Requirements
-* Create a way to load the CSV's service_provider_data.csv and rate_data.csv into the database using these models.
-* Add any specs you think are necessary.
-# Front-end Portion/UI
-
-The repo has Vue already installed with Webpacker.
-
-#### Requirements
-* Fetch the data from the Rails app on page load.
-* Update the rates index view with a list of: company's name, origin, destination, rate.
-* Style the view to match the [mockup](https://www.figma.com/file/HSbd9xjW2S1gsx5EL0bK91/F%2FE-Challenge?node-id=0%3A1), and make it responsive.
-* Create a simple bare-bones form that allows editing and updating the rate.
+The app uses sqlite as the datastore. 
 
 To run the app:
 ```
@@ -44,6 +28,22 @@ bin/rails db:create
 bin/rails db:migrate
 bin/rails s
 ```
+Please utilize the Rails app to store, look up and update rates from shipping service providers. 
+# Back-end Portion
+
+#### Requirements
+* Create a way to load the CSV's service_provider_data.csv and rate_data.csv into the database using these models.
+* Implement api end points to fetch rates and update them.
+* Add any specs you think are necessary.
+
+# Front-end Portion/UI
+The repo has Vue already installed with Webpacker.
+
+#### Requirements
+* Fetch the data from the Rails app on page load.
+* Update the rates index view with a list of: company's name, origin, destination, rate from the backend end point.
+* Style the view to match the [mockup](https://www.figma.com/file/HSbd9xjW2S1gsx5EL0bK91/F%2FE-Challenge?node-id=0%3A1), and make it responsive.
+* Create a simple bare-bones form that allows editing and updating the rate using the backend end point.
 
 # README
 * Update the README.MD with how to run your app and how to load your data.
