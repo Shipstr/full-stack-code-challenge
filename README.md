@@ -33,7 +33,7 @@ Please utilize the Rails app to store, look up and update rates from shipping se
 
 #### Requirements
 * Create a way to load the CSV's service_provider_data.csv and rate_data.csv into the database using these models.
-* Implement api end points to fetch rates and update them.
+* Implement AIP endpoints to fetch rates and update them.
 * Add any specs you think are necessary.
 
 # Front-end Portion/UI
@@ -41,9 +41,9 @@ The repo has Vue already installed with Webpacker.
 
 #### Requirements
 * Fetch the data from the Rails app on page load.
-* Update the rates index view with a list of: company's name, origin, destination, rate from the backend end point.
+* Update the rates index view with a list of: company's name, origin, destination, rate from the backend endpoint.
 * Style the view to match the [mockup](https://www.figma.com/file/HSbd9xjW2S1gsx5EL0bK91/F%2FE-Challenge?node-id=0%3A1), and make it responsive.
-* Create a simple bare-bones form that allows editing and updating the rate using the backend end point.
+* Create a simple bare-bones form that allows editing and updating the rate using the backend endpoint.
 
 # README
 * Update the README.MD with how to run your app and how to load your data.
