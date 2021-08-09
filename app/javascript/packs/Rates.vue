@@ -4,7 +4,7 @@
     <ul>
       <li class="title">
         <div>Company Name</div>
-        <div>Total</div>
+        <div>Total($)</div>
       </li>
       <li v-for="r in rates" :key="r.id">
         <div>{{ r.companyName }}</div>
