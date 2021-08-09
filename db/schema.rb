@@ -14,14 +14,12 @@ ActiveRecord::Schema.define(version: 2021_08_06_215918) do
 
   create_table "service_providers", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "flat_rate_cents", default: 0, null: false
-    t.string "flat_rate_currency", default: "USD", null: false
+    t.float "flat_rate", null: false
   end
 
   create_table "shipping_rates", force: :cascade do |t|
     t.integer "service_provider_id"
-    t.integer "rate_cents", default: 0, null: false
-    t.string "rate_currency", default: "USD", null: false
+    t.float "rate", null: false
     t.string "origin", limit: 2, null: false
     t.string "destination", limit: 2, null: false
     t.index ["service_provider_id"], name: "index_shipping_rates_on_service_provider_id"
