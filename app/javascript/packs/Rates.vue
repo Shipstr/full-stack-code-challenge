@@ -10,7 +10,7 @@
         <div>{{ r.companyName }}</div>
         <div>{{ r.origin }}</div>
         <div>{{ r.destination }}</div>
-        <div>{{ r.rate.total }} {{ r.rate.currency }}</div>
+        <div>{{ r.rate }}</div>
       </li>
     </ul>
   </div>
@@ -24,10 +24,7 @@ export default {
       rates: [
         {
           companyName: 'service provider name',
-          rate: {
-            cents: 100,
-            currency: 'USD'
-          },
+          rate: 100,
           origin: 'US',
           destination: 'ZA'
         }

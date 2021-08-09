@@ -14,11 +14,11 @@ The app has the following models:
 #### Provider Model 
 * A model to represent a shipping service provider. It has following attributes:
   * Name of company
-  * A flat shipping rate as a monetary value with currency
+  * A flat rate
 
 #### Rates Model
 * A model to represent shipping rates that each provider has (different from the provider's flat rate). It has following attributes:
-  * Rate as monetary value with currency
+  * Rate as float value
   * Origin, as two-letter country code
   * Destination, as two-letter country code
   * Relationship to the shipping provider
@@ -32,7 +32,7 @@ The repo has Vue already installed with Webpacker.
 
 #### Requirements
 * Fetch the data from the Rails app on page load.
-* Update the rates index view with a list of: company's name, origin, destination, formatted rate as a monetary value.
+* Update the rates index view with a list of: company's name, origin, destination, rate.
 * Style the view to match the mockup rates_mockup.png and make it responsive.
 * Create a simple bare-bones form that allows editing and updating the rate.
 
