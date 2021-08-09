@@ -4,24 +4,24 @@ We'd like you to finish building the Rails application with a few key components
 
 *We expect this exercise to take 2-4 hours at the most.* If you ran out of time, please comment on what remains to be done in the README.
 
-Since this is a fullstack challenge, we are looking for styling and responsiveness matching the mockup in the root directory. 
-
 # Back-end Portion
 
 Please utilize the Rails app to store, look up and update rates from shipping service providers.
 The app has the following models:
 
 #### Provider Model 
-* A model to represent a shipping service provider. It has following attributes:
+* A model to represent a shipping service provider. It has the following attributes:
   * Name of company
-  * A flat rate
+  * A flat rate as a float value
 
 #### Rates Model
-* A model to represent shipping rates that each provider has (different from the provider's flat rate). It has following attributes:
-  * Rate as float value
+* A model to represent shipping rates that each provider has (different from the provider's flat rate). It has the following attributes:
+  * Rate as a float value
   * Origin, as two-letter country code
   * Destination, as two-letter country code
   * Relationship to the shipping provider
+  
+The app uses sqlite as the datastore.  
 
 #### Requirements
 * Create a way to load the CSV's service_provider_data.csv and rate_data.csv into the database using these models.
@@ -33,13 +33,14 @@ The repo has Vue already installed with Webpacker.
 #### Requirements
 * Fetch the data from the Rails app on page load.
 * Update the rates index view with a list of: company's name, origin, destination, rate.
-* Style the view to match the mockup rates_mockup.png and make it responsive.
+* Style the view to match the mockup "rates_mockup.png" (in the root directory), and make it responsive.
 * Create a simple bare-bones form that allows editing and updating the rate.
 
 To run the app:
 ```
 yarn
 bundle
+bin/rails db:create
 bin/rails db:migrate
 bin/rails s
 ```
