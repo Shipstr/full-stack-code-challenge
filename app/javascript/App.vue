@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <providers />
+    <rates />
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import rates from './packs/Rates'
 
 export default {
   components: {
-    providers: rates
+    rates: rates
   }
 }
 </script>
