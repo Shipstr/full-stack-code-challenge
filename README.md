@@ -17,8 +17,6 @@ The app has the following models:
   * Origin, as two-letter country code
   * Destination, as two-letter country code
   * Relationship to the shipping provider
-  
-The app uses sqlite as the datastore. 
 
 To run the app:
 ```
@@ -33,7 +31,7 @@ Please utilize the Rails app to store, look up and update rates from shipping se
 
 #### Requirements
 * Create a way to load the CSV's service_provider_data.csv and rate_data.csv into the database using these models.
-* Implement AIP endpoints to fetch rates and update them.
+* Implement API endpoints to fetch rates and update them.
 * Add any specs you think are necessary.
 
 # Front-end Portion/UI
