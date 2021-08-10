@@ -4,13 +4,15 @@ We'd like you to finish building the Rails application with a few key components
 
 *We expect this exercise to take 2-4 hours at the most.* If you ran out of time, please comment on what remains to be done in the README.
 
+For this backend challenge, the default configurations should work as-is. Feel free to update the configurations for your implementation of the challenge, if needed.
+
 # Back-end Portion
 
 Please utilize the Rails app to store, look up and update rates from shipping service providers.
 The app has the following models:
 
-#### Provider Model 
-* A model to represent a shipping service provider. It has the following attributes:
+#### Provider Model
+* A model to represent a shipping service provider with a flat rate. It should have these attributes:
   * Name of company
   * A flat rate as a float value
 
@@ -20,12 +22,11 @@ The app has the following models:
   * Origin, as two-letter country code
   * Destination, as two-letter country code
   * Relationship to the shipping provider
-  
-The app uses sqlite as the datastore.  
 
 #### Requirements
 * Create a way to load the CSV's service_provider_data.csv and rate_data.csv into the database using these models.
 * Add any specs you think are necessary.
+
 # Front-end Portion/UI
 
 The repo has Vue already installed with Webpacker.
