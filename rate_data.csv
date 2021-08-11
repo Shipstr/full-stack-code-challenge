@@ -1,4 +1,4 @@
-"rate","origin","destination","shipping provider id"
+"rate","origin","destination","carrier id"
 32.08,"US","AQ",3
 21.02,"ES","IS",4
 22.7,"PK","GA",3

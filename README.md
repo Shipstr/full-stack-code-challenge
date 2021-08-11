@@ -8,17 +8,16 @@ For this challenge, the default configurations should work as-is. Feel free to u
 
 The app has the following models:
 
-#### Provider Model
-* A model to represent a shipping service provider with a flat rate. It has the following attributes:
+#### Carrier Model
+* A model to represent a carrier with a flat rate. It has the following attributes:
   * Name of company
-  * A flat rate as a float value
 
 #### Rates Model
-* A model to represent shipping rates that each provider has (different from the provider's flat rate). It has the following attributes:
+* A model to represent shipping rates that each carrier has (different from the carrier's flat rate). It has the following attributes:
   * Rate as a float value
   * Origin, as two-letter country code
   * Destination, as two-letter country code
-  * Relationship to the shipping provider
+  * Relationship to the carrier
 
 To run the app:
 ```
@@ -28,11 +27,11 @@ bin/rails db:create
 bin/rails db:migrate
 bin/rails s
 ```
-Please utilize the Rails app to store, look up and update rates from shipping service providers. 
+Please utilize the Rails app to store, look up and update rates from shipping service providers.
 # Back-end Portion
 
 #### Requirements
-* Create a way to load the CSV's service_provider_data.csv and rate_data.csv into the database using these models.
+* Create a way to load the CSV's `carrier_data.csv` and `rate_data.csv` into the database using these models.
 * Implement API endpoints to fetch rates and update them.
 * Add any specs you think are necessary.
 
@@ -41,7 +40,7 @@ The repo has Vue already installed with Webpacker.
 
 #### Requirements
 * Fetch the data from the Rails app on page load.
-* Update the rates index view with a list of: company's name, origin, destination, rate from the backend endpoint.
+* Update the rates index view with a list of: carrier's name, origin, destination, rate from the backend endpoint.
 * Style the view to match the [mockup](https://www.figma.com/file/HSbd9xjW2S1gsx5EL0bK91/F%2FE-Challenge?node-id=0%3A1), and make it responsive.
 * Create a simple bare-bones form that allows editing and updating the rate using the backend endpoint.
 

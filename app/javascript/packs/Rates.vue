@@ -1,16 +1,17 @@
 <template>
   <div>
-    <h1>Rates List</h1>
     <ul>
       <li class="title">
-        <div>Company Name</div>
-        <div>Total($)</div>
+        <div>Carrier</div>
+        <div>Origin</div>
+        <div>Destination</div>
+        <div>Rate</div>
       </li>
-      <li v-for="r in rates" :key="r.id">
-        <div>{{ r.companyName }}</div>
-        <div>{{ r.origin }}</div>
-        <div>{{ r.destination }}</div>
-        <div>{{ r.rate }}</div>
+      <li v-for="rate in rates" :key="rate.id">
+        <div>{{ rate.companyName }}</div>
+        <div>{{ rate.origin }}</div>
+        <div>{{ rate.destination }}</div>
+        <div>{{ rate.rate }}</div>
       </li>
     </ul>
   </div>
@@ -23,10 +24,11 @@ export default {
     return {
       rates: [
         {
-          companyName: 'service provider name',
-          rate: 100,
+          id: 1,
+          name: 'carrier name',
           origin: 'US',
           destination: 'ZA'
+          rate: 1200.00
         }
       ]
     }
