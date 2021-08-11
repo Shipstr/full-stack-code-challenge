@@ -4,15 +4,12 @@ We'd like you to finish building the Rails application with a few key components
 
 *We expect this exercise to take 2-4 hours at the most.* If you ran out of time, please comment on what remains to be done in the README.
 
-For this backend challenge, the default configurations should work as-is. Feel free to update the configurations for your implementation of the challenge, if needed.
+For this challenge, the default configurations should work as-is. Feel free to update the configurations for your implementation of the challenge, if needed.
 
-# Back-end Portion
-
-Please utilize the Rails app to store, look up and update rates from carriers.
 The app has the following models:
 
 #### Carrier Model
-* A model to represent a carrier with a flat rate. It should have these attributes:
+* A model to represent a carrier with a flat rate. It has the following attributes:
   * Name of company
 
 #### Rates Model
@@ -22,20 +19,6 @@ The app has the following models:
   * Destination, as two-letter country code
   * Relationship to the carrier
 
-#### Requirements
-* Create a way to load the CSV's `carrier_data.csv` and `rate_data.csv` into the database using these models.
-* Add any specs you think are necessary.
-
-# Front-end Portion/UI
-
-The repo has Vue already installed with Webpacker.
-
-#### Requirements
-* Fetch the data from the Rails app on page load.
-* Update the rates index view with a list of: company's name, origin, destination, rate.
-* Style the view to match the [mockup](https://www.figma.com/file/HSbd9xjW2S1gsx5EL0bK91/F%2FE-Challenge?node-id=0%3A1), and make it responsive.
-* Create a simple bare-bones form that allows editing and updating the rate.
-
 To run the app:
 ```
 yarn
@@ -44,6 +27,22 @@ bin/rails db:create
 bin/rails db:migrate
 bin/rails s
 ```
+Please utilize the Rails app to store, look up and update rates from shipping service providers.
+# Back-end Portion
+
+#### Requirements
+* Create a way to load the CSV's `carrier_data.csv` and `rate_data.csv` into the database using these models.
+* Implement API endpoints to fetch rates and update them.
+* Add any specs you think are necessary.
+
+# Front-end Portion/UI
+The repo has Vue already installed with Webpacker.
+
+#### Requirements
+* Fetch the data from the Rails app on page load.
+* Update the rates index view with a list of: carrier's name, origin, destination, rate from the backend endpoint.
+* Style the view to match the [mockup](https://www.figma.com/file/HSbd9xjW2S1gsx5EL0bK91/F%2FE-Challenge?node-id=0%3A1), and make it responsive.
+* Create a simple bare-bones form that allows editing and updating the rate using the backend endpoint.
 
 # README
 * Update the README.MD with how to run your app and how to load your data.
