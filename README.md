@@ -8,23 +8,22 @@ For this backend challenge, the default configurations should work as-is. Feel f
 
 # Back-end Portion
 
-Please utilize the Rails app to store, look up and update rates from shipping service providers.
+Please utilize the Rails app to store, look up and update rates from carriers.
 The app has the following models:
 
-#### Provider Model
-* A model to represent a shipping service provider with a flat rate. It should have these attributes:
+#### Carrier Model
+* A model to represent a carrier with a flat rate. It should have these attributes:
   * Name of company
-  * A flat rate as a float value
 
 #### Rates Model
-* A model to represent shipping rates that each provider has (different from the provider's flat rate). It has the following attributes:
+* A model to represent shipping rates that each carrier has (different from the carrier's flat rate). It has the following attributes:
   * Rate as a float value
   * Origin, as two-letter country code
   * Destination, as two-letter country code
-  * Relationship to the shipping provider
+  * Relationship to the carrier
 
 #### Requirements
-* Create a way to load the CSV's service_provider_data.csv and rate_data.csv into the database using these models.
+* Create a way to load the CSV's `carrier_data.csv` and `rate_data.csv` into the database using these models.
 * Add any specs you think are necessary.
 
 # Front-end Portion/UI

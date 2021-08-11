@@ -1,4 +1,4 @@
-class ShippingRatesController < ApplicationController
+class RatesController < ApplicationController
   def index
     # TODO: Implement me
   end
